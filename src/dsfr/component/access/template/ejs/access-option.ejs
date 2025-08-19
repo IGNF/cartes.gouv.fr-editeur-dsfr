@@ -1,0 +1,39 @@
+<%#
+# paramètres accès rapide option
+
+* option.id (string, required) : id de l'option
+
+* option.button (object, required) : Option du bouton (voir composant button)
+
+Certaines valeurs par défaut sont outrepassées :
+
+* option.button.kind : Type du bouton : 3 (au lieu de 1)
+
+* option.button.size : Taille du bouton : 'sm' (aucune valeur par défaut normalement)
+
+* option.button.markup : tag html du bouton : 'a' (au lieu de 'button')
+
+%>
+
+<% eval(include('../../../../core/index.ejs')); %>
+
+<%
+let option = locals.option || {};
+const button = option.button;
+const minBtnClasses = [`${prefix}-option__btn`];
+const minBtnAttrs = {
+  title: button.title
+};
+
+minBtnAttrs.id = option.id || uniqueId('option');
+
+button.classes = button.classes !== undefined ? button.classes.concat(minBtnClasses) : minBtnClasses;
+button.attributes = button.attributes !== undefined ? {...minBtnAttrs, ...button.attributes} : minBtnAttrs;
+button.kind = button.kind ? button.kind : 3;
+button.size = button.size ? button.size : 'sm';
+button.markup = button.markup ? button.markup : 'a';
+%>
+
+<div class="<%= prefix %>-option">
+  <%- include('../../../button/template/ejs/button', {button:button}); %>
+</div>

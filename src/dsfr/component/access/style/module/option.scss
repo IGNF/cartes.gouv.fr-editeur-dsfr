@@ -1,0 +1,21 @@
+////
+/// Access Module : Options
+/// @group access
+////
+
+#{ns(option)} {
+  @include display-flex(column);
+  @include margin(0);
+  @include padding(4v);
+
+  flex-direction: column;
+  align-items: center;
+  pointer-events: auto;
+
+  &__btn {
+    @include nest-btn(sm, left, null, null, false);
+    @include size(100% !important);
+    @include min-height(unset !important);
+    justify-content: center !important;
+  }
+}
