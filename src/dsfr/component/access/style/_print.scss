@@ -1,0 +1,33 @@
+////
+/// access Print
+/// @group access
+////
+
+#{ns(access)} {
+  &__menu {
+    display: none;
+  }
+
+  &__body {
+    &-row {
+      @include padding(0);
+    }
+
+    #{ns(access)}__tools,
+    #{ns(access)}__navbar {
+      display: none;
+    }
+  }
+
+  &__brand {
+    flex-wrap: nowrap;
+
+    &-top {
+      width: auto;
+    }
+  }
+
+  &__service {
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,80 @@
+<%#
+# paramètres access
+
+* access (object, required) : Paramètres du template
+  ** access.id (String, required) : attribut id de l'accès rapide
+  ** access.collapseId (String, required) : attribut id du collapse
+  ** access.button (object, required) : Paramètres du bouton d'accès rapide
+  ** access.links (object, required) : Paramètres des liens d'accès rapide
+  ** access.description (object, optional) : Paramètres des liens d'accès rapide
+  ** access.option (object, optional) : Paramètres des liens d'accès rapide
+
+Exemple complet :
+
+access = {
+  id: 'id de l'access',
+  collapseId: 'id du collapse',
+  button: { voir button },
+  links: [
+    { voir button }
+  ]
+  description: {
+    label: "Texte principal",
+    info: 'Détails'
+  },
+  option: {
+    button: { voir button }
+  }
+}
+%>
+
+<% eval(include('../../../../core/index.ejs')); %>
+
+<%
+const access = locals.access || {};
+const attributes = access.attributes || {};
+attributes.id = access.id || uniqueId('access');
+const collapseId = access.collapseId || uniqueId('collapse');
+%>
+
+<nav role="navigation" class="<%= prefix %>-access <%= prefix %>-nav" <%- includeAttrs(attributes) %>>
+  <div class="<%= prefix %>-nav__item">
+    <%
+    const accessBtn = access.button || {};
+    const minBtnClasses = [`${prefix}-access__btn`, `${prefix}-nav__btn`];
+    const minBtnAttrs = {
+      'aria-controls': collapseId,
+      'aria-expanded': false,
+    };
+    accessBtn.classes = accessBtn.classes !== undefined ? accessBtn.classes.concat(minBtnClasses) : minBtnClasses;
+    accessBtn.attributes = accessBtn.attributes !== undefined ? {...minBtnAttrs, ...accessBtn.attributes} : minBtnAttrs;
+    accessBtn.size = 'sm';
+    %>
+
+    <%- include('../../../button/template/ejs/button', {button:accessBtn}); %>
+     <div class="<%= prefix %>-collapse <%= prefix %>-access__menu <%= prefix %>-menu" id="<%= collapseId %>">
+
+        <ul class="<%= prefix %>-menu__list">
+
+        <% if (access.description) { %>
+            <li class="<%= prefix %>-menu__item">
+              <%- include('./access-description', { description: access.description }); %>
+            </li>
+        <% } %>
+          <% for( let i = 0; i < access.links.length; i++ ) { 
+             %>
+            <li class="<%= prefix %>-menu__item">
+              <%- include('./access-link', { link: access.links[i] }); %>
+            </li>
+          <% } %>
+        
+        <% if (access.option) { %>
+            <li class="<%= prefix %>-menu__item <%= prefix %>-menu__option">
+              <%- include('./access-option', { option: access.option }); %>
+              </li>
+        <% } %>
+        </ul>
+
+      </div>
+  </div>
+</nav>
