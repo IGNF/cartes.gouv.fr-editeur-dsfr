@@ -52,6 +52,10 @@
     #{ns(menu)} {
       @include list {
         @include padding(0);
+
+        @include respond-from(lg) {
+          @include width(64v);
+        }
       }
     }
   }
