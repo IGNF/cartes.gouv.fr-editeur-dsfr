@@ -54,7 +54,7 @@
         @include padding(0);
 
         @include respond-from(lg) {
-          @include width(64v);
+          @include width(72v);
         }
       }
     }
