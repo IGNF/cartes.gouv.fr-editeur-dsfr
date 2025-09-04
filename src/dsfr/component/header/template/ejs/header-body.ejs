@@ -8,10 +8,11 @@
 %>
 <% eval(include('../../../../core/index.ejs')); %>
 
-<% let body = locals.body || {}; %>
+<% let body = locals.body || {};
+%>
 
 <div class="<%= prefix %>-header__body">
-  <div class="<%= prefix %>-container" >
+  <div class="<%= prefix %>-container<%= header.compact ? '--fluid' : '' %>" >
     <div class="<%= prefix %>-header__body-row">
       <%- include('./header-brand', {brand: body.brand}); %>
 

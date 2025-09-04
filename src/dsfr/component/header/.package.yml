@@ -10,6 +10,7 @@ style:
   - navigation
   - modal
   - search
+  - access
   - translate
 script:
   - core

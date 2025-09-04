@@ -2,7 +2,7 @@
   "name": "@gouvfr/dsfr",
   "version": "1.14.1",
   "description": "Système de Design de l'Etat - DSFR",
-  "repository": "git@github.com:GouvernementFR/dsfr.git",
+  "repository": "git@github.com:IGNF/cartes.gouv.fr-editeur-dsfr.git",
   "author": "Service d'Information du Gouvernement <maxime.beaugrand@pm.gouv.fr>",
   "license": "SEE LICENSE IN LICENSE.md",
   "config": {

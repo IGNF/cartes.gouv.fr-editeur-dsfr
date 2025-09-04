@@ -1,0 +1,17 @@
+////
+/// Access Module : Description
+/// @group access
+////
+
+#{ns(description)} {
+  @include display-flex(column);
+  @include margin(0);
+  @include padding(4v);
+
+  @include respond-from(lg) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: space(1v);
+    pointer-events: auto;
+  }
+}
