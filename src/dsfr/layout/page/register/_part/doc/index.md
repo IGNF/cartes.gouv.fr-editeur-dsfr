@@ -30,7 +30,7 @@ La page de création de compte est composée des éléments suivants :
 
 ![](./_asset/page-creation-compte-modele.png)
 
-:::fr-accordion[### Extrait de code]{id='accordion-account-creation'}
+:::fr-accordion[Extrait de code]{id='accordion-account-creation'}
 ```html
 <main role="main" id="content">
     <div class="fr-container fr-mt-8v fr-mt-md-14v fr-mb-2v fr-mb-md-8v">
@@ -185,9 +185,9 @@ Si vous souhaitez demander des informations supplémentaires sur l’utilisateur
 
 ### Étape 1 - Identifiant
 
-![](./_asset/creation-compte-etape-identifiant.jpg)
+![](./_asset/creation-compte-etape-identifiant.png)
 
-:::fr-accordion[### Extrait de code]{id=‘accordion-login’}
+:::fr-accordion[Extrait de code]{id=‘accordion-login’}
 ```html
 <main role="main" id="content">
     <div class="fr-container fr-mt-8v fr-mt-md-14v fr-mb-2v fr-mb-md-8v">
@@ -320,9 +320,9 @@ Si vous souhaitez demander des informations supplémentaires sur l’utilisateur
 
 ### Étape 2 - Identité
 
-![](./_asset/creation-compte-etape-identite.jpg)
+![](./_asset/creation-compte-etape-identite.png)
 
-:::fr-accordion[### Extrait de code]{id=‘accordion-identify’}
+:::fr-accordion[Extrait de code]{id=‘accordion-identify’}
 ```html
 <main role="main" id="content">
     <div class="fr-container fr-mt-8v fr-mt-md-14v fr-mb-2v fr-mb-md-8v">
@@ -463,9 +463,9 @@ Si vous souhaitez demander des informations supplémentaires sur l’utilisateur
 
 ### Étape 3 - Coordonnées
 
-![](./_asset/creation-compte-etape-coordonnees.jpg)
+![](./_asset/creation-compte-etape-coordonnees.png)
 
-:::fr-accordion[### Extrait de code]{id=‘accordion-contact-details’}
+:::fr-accordion[Extrait de code]{id=‘accordion-contact-details’}
 ```html
 <main role="main" id="content">
     <div class="fr-container fr-mt-8v fr-mt-md-14v fr-mb-2v fr-mb-md-8v">
@@ -591,7 +591,7 @@ Le modèle est composé des composants suivant :
 - Un titre et chapô - obligatoires.
 - Un bloc gris contenant une alerte et un texte additionnel.
 
-:::fr-accordion[### Extrait de code]{id=‘accordion-creation-activation-confirmation’}
+:::fr-accordion[Extrait de code]{id=‘accordion-creation-activation-confirmation’}
 ```html
 <main role="main" id="content">
     <div class="fr-container fr-mt-8v fr-mt-md-14v fr-mb-2v fr-mb-md-8v">

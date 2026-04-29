@@ -46,7 +46,7 @@ L’ancienne nomenclature des classes en `fr-fi` (remplacée par `fr-icon`) est 
 
 **Ajout d'icônes personnalisées**
 
-Pour ajouter une icône qui ne serait pas présente dans le DSFR, il est possible de créer un fichier SVG ou de l’importer depuis la librairie Remixicon. Il faudra ensuite créer un fichier CSS pour associé une classe à cette icône, en suivant la nomenclature `fr-icon-[nom-de-l'icône]`. Par exemple, pour une icône nommée `custom-icon`, le fichier CSS contiendra :
+Pour ajouter une icône qui ne serait pas présente dans le DSFR, il est possible de créer un fichier SVG ou de le télécharger depuis la librairie Remixicon. Il faudra ensuite créer un fichier CSS pour associé une classe à cette icône, en suivant la nomenclature `fr-icon-[nom-de-l'icône]`. Par exemple, pour une icône nommée `custom-icon`, le fichier CSS contiendra :
 
 ```CSS
 .fr-icon-custom-icon::before,
@@ -56,7 +56,19 @@ Pour ajouter une icône qui ne serait pas présente dans le DSFR, il est possibl
 }
 ```
 
-Ne pas modifier directement les fichiers CSS du DSFR, mais plutôt créer un fichier CSS personnalisé pour vos icônes. De cette manière, vous pourrez monter de version du DSFR sans perdre vos modifications.
+[Facultatif] Pour fonctionner sur Internet Explorer 11, il faudra également ajouter, de préférence dans un autre fichier CSS, la règle suivante :
+
+```CSS
+@media screen and (min-width: 0\0) and (min-resolution: 72dpi) {
+  .fr-icon-custom-icon::before,
+  .fr-icon-custom-icon::after {
+    background-image: url("../icons/custom-icon.svg");
+  }
+}
+```
+
+>[!NOTE]
+>Ne pas modifier directement les fichiers CSS du DSFR, mais plutôt créer un fichier CSS personnalisé pour vos icônes. De cette manière, vous pourrez monter de version du DSFR sans perdre vos modifications.
 
 ## Sélection d’icônes
 
@@ -67,7 +79,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
 
 ### Arrows
 
-#### Icônes créées par l'équipe DSFR
+#### Arrows - Icônes créées par l'équipe DSFR
 
 <div class="dsfr-doc-preview">
   <span class="fr-icon-arrow-left-s-first-line" aria-hidden="true"></span>
@@ -76,7 +88,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
   <span class="fr-icon-arrow-right-s-line-double" aria-hidden="true"></span>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='icons-system-dsfr-accordion'}
+:::fr-accordion[Extrait de code]{id='icons-arrows-dsfr-accordion'}
 
 ```HTML
 <span class="fr-icon-arrow-left-s-first-line" aria-hidden="true"></span>
@@ -88,7 +100,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
 
 :::
 
-#### Icônes proposées par RemixIcon
+#### Arrows - Icônes proposées par RemixIcon
 
 <div class="dsfr-doc-preview">
   <span class="fr-icon-arrow-left-s-fill" aria-hidden="true"></span>
@@ -176,7 +188,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
   <span class="fr-icon-skip-up-line" aria-hidden="true"></span>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='icons-building-accordion'}
+:::fr-accordion[Extrait de code]{id='icons-arrows-remixicon-accordion'}
 
 ```HTML
 <span class="fr-icon-arrow-left-s-fill" aria-hidden="true"></span>
@@ -340,7 +352,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
   <span class="fr-icon-tent-line" aria-hidden="true"></span>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='icons-building-accordion'}
+:::fr-accordion[Extrait de code]{id='icons-building-accordion'}
 
 ```HTML
 <span class="fr-icon-ancient-gate-fill" aria-hidden="true"></span>
@@ -533,7 +545,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
   <span class="fr-icon-window-2-line" aria-hidden="true"></span>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='icons-business-accordion'}
+:::fr-accordion[Extrait de code]{id='icons-business-accordion'}
 
 ```HTML
 <span class="fr-icon-archive-fill" aria-hidden="true"></span>
@@ -804,7 +816,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
   <span class="fr-icon-speak-line" aria-hidden="true"></span>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='icons-communication-accordion'}
+:::fr-accordion[Extrait de code]{id='icons-communication-accordion'}
 
 ```HTML
 <span class="fr-icon-chat-2-fill" aria-hidden="true"></span>
@@ -1016,7 +1028,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
   <span class="fr-icon-triangle-line" aria-hidden="true"></span>
   </div>
 
-:::fr-accordion[### Extrait de code]{id='icons-design-accordion'}
+:::fr-accordion[Extrait de code]{id='icons-design-accordion'}
 
 ```HTML
 <span class="fr-icon-ball-pen-fill" aria-hidden="true"></span>
@@ -1262,7 +1274,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
   <span class="fr-icon-terminal-fill" aria-hidden="true"></span>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='icons-development-accordion'}
+:::fr-accordion[Extrait de code]{id='icons-development-accordion'}
 
 ```HTML
 <span class="fr-icon-bug-fill" aria-hidden="true"></span>
@@ -1469,7 +1481,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
   <span class="fr-icon-wireless-charging-line" aria-hidden="true"></span>
 </div>
 
- :::fr-accordion[### Extrait de code]{id='icons-device-accordion'}
+ :::fr-accordion[Extrait de code]{id='icons-device-accordion'}
 
 ```HTML
 <span class="fr-icon-bluetooth-fill" aria-hidden="true"></span>
@@ -1697,7 +1709,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
   <span class="fr-icon-todo-line" aria-hidden="true"></span>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='icons-document-accordion'}
+:::fr-accordion[Extrait de code]{id='icons-document-accordion'}
 
 ```HTML
 <span class="fr-icon-article-fill" aria-hidden="true"></span>
@@ -1747,7 +1759,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
 
 ### Editor
 
-#### Icônes créées par l'équipe DSFR
+#### Editor - Icônes créées par l'équipe DSFR
 
 <div class="dsfr-doc-preview">
   <span class="fr-icon-bold" aria-hidden="true"></span>
@@ -1756,7 +1768,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
   <span class="fr-icon-quote-line" aria-hidden="true"></span>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='icons-dsfr-accordion'}
+:::fr-accordion[Extrait de code]{id='icons-editor-dsfr-accordion'}
 
 ```HTML
 <span class="fr-icon-bold" aria-hidden="true"></span>
@@ -1770,7 +1782,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
 
 :::
 
-#### Icônes proposées par RemixIcon
+#### Editor - Icônes proposées par RemixIcon
 
 <div class="dsfr-doc-preview">
   <span class="fr-icon-code-view" aria-hidden="true"></span>
@@ -1810,7 +1822,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
   <span class="fr-icon-sort-desc" aria-hidden="true"></span>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='icons-remixicon-accordion'}
+:::fr-accordion[Extrait de code]{id='icons-editor-remixicon-accordion'}
 
 ```HTML
 <span class="fr-icon-code-view" aria-hidden="true"></span>
@@ -1908,7 +1920,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
   <span class="fr-icon-trophy-line" aria-hidden="true"></span>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='icons-finance-accordion'}
+:::fr-accordion[Extrait de code]{id='icons-finance-accordion'}
 
 ```HTML
 <span class="fr-icon-bank-card-fill" aria-hidden="true"></span>
@@ -1984,7 +1996,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
   <span class="fr-icon-virus-line" aria-hidden="true"></span>
 </div>
 
- :::fr-accordion[### Extrait de code]{id='icons-health-accordion'}
+ :::fr-accordion[Extrait de code]{id='icons-health-accordion'}
 
 ```HTML
 <span class="fr-icon-capsule-fill" aria-hidden="true"></span>
@@ -2060,7 +2072,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
   <span class="fr-icon-tiktok-line" aria-hidden="true"></span>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='logos-dsfr-accordion'}
+:::fr-accordion[Extrait de code]{id='icons-logos-dsfr-accordion'}
 
 ```HTML
 <span class="fr-icon-dailymotion-fill" aria-hidden="true"></span>
@@ -2127,7 +2139,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
   <span class="fr-icon-bluesky-line" aria-hidden="true"></span>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='logos-remixicon-accordion'}
+:::fr-accordion[Extrait de code]{id='icons-logos-remixicon-accordion'}
 
 ```HTML
 <span class="fr-icon-chrome-fill" aria-hidden="true"></span>
@@ -2261,7 +2273,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
   <span class="fr-icon-train-line" aria-hidden="true"></span>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='icons-map-accordion'}
+:::fr-accordion[Extrait de code]{id='icons-map-accordion'}
 
 ```HTML
 <span class="fr-icon-anchor-fill" aria-hidden="true"></span>
@@ -2382,7 +2394,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
   <span class="fr-icon-volume-up-line" aria-hidden="true"></span>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='icons-media-accordion'}
+:::fr-accordion[Extrait de code]{id='icons-media-accordion'}
 
 ```HTML
 <span class="fr-icon-camera-fill" aria-hidden="true"></span>
@@ -2474,7 +2486,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
   <span class="fr-icon-wheelchair-line" aria-hidden="true"></span>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='icons-other-accordion'}
+:::fr-accordion[Extrait de code]{id='icons-other-accordion'}
 
 ```HTML
 <span class="fr-icon-leaf-fill" aria-hidden="true"></span>
@@ -2518,7 +2530,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
 
 ### System
 
-#### Icônes créées par l'équipe DSFR
+#### System - Icônes créées par l'équipe DSFR
 
 <div class="dsfr-doc-preview">
   <span class="fr-icon-error-fill" aria-hidden="true"></span>
@@ -2532,7 +2544,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
   <span class="fr-icon-theme-fill" aria-hidden="true"></span>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='icons-system-dsfr-accordion'}
+:::fr-accordion[Extrait de code]{id='icons-system-dsfr-accordion'}
 
 ```HTML
 <span class="fr-icon-error-fill" aria-hidden="true"></span>
@@ -2552,7 +2564,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
 
 :::
 
-#### Icônes proposées par RemixIcon
+#### System - Icônes proposées par RemixIcon
 
 <div class="dsfr-doc-preview">
   <span aria-hidden="true" class="fr-icon-add-line"></span>
@@ -2635,7 +2647,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
   <span aria-hidden="true" class="fr-icon-zoom-out-line"></span>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='icons-system-remixicon-accordion'}
+:::fr-accordion[Extrait de code]{id='icons-system-remixicon-accordion'}
 
 ```HTML
 <span aria-hidden="true" class="fr-icon-add-line"></span>
@@ -2792,7 +2804,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
   <span class="fr-icon-user-star-line" aria-hidden="true"></span>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='icons-user-accordion'}
+:::fr-accordion[Extrait de code]{id='icons-user-accordion'}
 
 ```HTML
 <span class="fr-icon-account-circle-fill" aria-hidden="true"></span>
@@ -2870,7 +2882,7 @@ Les icônes classées dans dsfr sont soit des icônes créées spécialement, so
   <span class="fr-icon-windy-line" aria-hidden="true"></span>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='icons-weather-accordion'}
+:::fr-accordion[Extrait de code]{id='icons-weather-accordion'}
 
 ```HTML
 <span class="fr-icon-cloudy-2-fill" aria-hidden="true"></span>

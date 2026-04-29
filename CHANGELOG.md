@@ -12,7 +12,122 @@ Pour plus d’informations : [Voir la documentation](https://www.systeme-de-desi
 
 ## v1.14
 
-### [1.14.1](https://github.com/GouvernementFR/dsfr/compare/v1.14.0...1.14.1) - 29 Août 2025
+### [v1.14.4](https://github.com/GouvernementFR/dsfr/compare/v1.14.3...v1.14.4) - 3 Mars 2026
+
+#### 🐛 fix: github action security [(#1397)](https://github.com/GouvernementFR/dsfr/pull/1397)
+- Corrige une faille de sécurité potentielle sur les github actions
+
+
+#### ♻️ refactor: nom des fichiers data.yml [(#1398)](https://github.com/GouvernementFR/dsfr/pull/1398)
+- change le nom des fichiers data.yml à la racine de chaque composant en index.yml
+
+
+
+### [v1.14.3](https://github.com/GouvernementFR/dsfr/compare/v1.14.2...v1.14.3) - 15 Décembre 2025
+
+#### ⬆️ chore(dependencies): mise à jour des dépendances npm [(#1350)](https://github.com/GouvernementFR/dsfr/pull/1350)
+
+
+#### 📝 docs(badge): titre page accessibilite en h2 [(#1334)](https://github.com/GouvernementFR/dsfr/pull/1334)
+
+
+#### ✨ feat(modal): documentation bouton non lié [DSFR-109] [(#1348)](https://github.com/GouvernementFR/dsfr/pull/1348)
+- Ajout de documentation sur la gestion des modales sans bouton associé et avec plusieurs boutons associés
+- Ajout d'un exemple de modale avec plusieurs boutons d'ouverture
+
+
+#### ✨ feat(table): header du tableau et bouton aria-sort [(#1347)](https://github.com/GouvernementFR/dsfr/pull/1347)
+- Alignement du contrôle segmenté à droite dans le header
+- Permet une utilisation correcte de aria-sort, ajouts des classe fr-btn--sort-asc et fr-btn--sort-desc
+- Ajout d'un exemple avec barre de recherche dans le header du tableau
+
+
+#### 🐛 fix(quote): espaces insécables avant et après les guillemets [(#1345)](https://github.com/GouvernementFR/dsfr/pull/1345)
+- Utilisation de l'espace insécable avant et après les guillemets pour éviter le retour à la ligne d'un guillemet seul
+
+
+#### 🐛 fix(navigation): fermeture au click sur un sous-élement html d'un nav_link [(#1344)](https://github.com/GouvernementFR/dsfr/pull/1344)
+- Corrige le clic sur un élément à l'intérieur d'un nav__link
+
+
+#### 📝 docs: mise à jour des assets [(#1343)](https://github.com/GouvernementFR/dsfr/pull/1343)
+- Corrections mineures sur les images de la documentation
+
+
+#### 📝 docs: mise à jour de la liste des moyens de connexion de FranceConnect [(#1336)](https://github.com/GouvernementFR/dsfr/pull/1336)
+
+
+#### 📝 docs(link): ajout du mot clé haut de page [(#1332)](https://github.com/GouvernementFR/dsfr/pull/1332)
+- Ajout du mot clé "haut de page" sur les pages de documentation du lien pour améliorer la recherche de ce terme
+
+
+#### 📝 fix(readme): met a jour les liens vers la doc de chaque composants [(#1331)](https://github.com/GouvernementFR/dsfr/pull/1331)
+- Correction des liens vers la documentation dans les fichiers package.yml de chaque package
+
+
+#### 🐛 fix(consent): corrige label nomdusite.fr [DSFR-140] [(#1323)](https://github.com/GouvernementFR/dsfr/pull/1323)
+- Remplace le label nomdusite.fr par nomdusite.gouv.fr dans le gestion de consentement
+
+
+#### 📝 docs(notice): supprime un doublon de paragraphe [(#1305)](https://github.com/GouvernementFR/dsfr/pull/1305)
+- Retire un texte en double
+
+
+#### 🐛 fix(stepper): Storybook min/max value steps & ajout markup titre [(#1313)](https://github.com/GouvernementFR/dsfr/pull/1313)
+- les propriétés stepCount et currentStep sont maintenant limitées entre 2 et 8
+- ajout des valeurs 'h6' et 'p' sur la propriété markup
+
+
+#### 📝 docs(icon): corrige les IDs des accordéons & retrait niveau de titre des extraits de code [(#1311)](https://github.com/GouvernementFR/dsfr/pull/1311)
+
+
+
+### [v1.14.2](https://github.com/GouvernementFR/dsfr/compare/v1.14.1...v1.14.2) - 17 Septembre 2025
+
+#### 🐛 fix(tab): ajoute un fond blanc au panel des onglets [(#1302)](https://github.com/GouvernementFR/dsfr/pull/1302)
+- Corrige le fond transparent du tab panel
+- Corrige la hauteur du panel (4px en trop)
+
+
+#### 📝 docs(assets): met a jour les visuels suite maj du footer [(#1303)](https://github.com/GouvernementFR/dsfr/pull/1303)
+Met à jour les visuels sur les pages :
+- page d’erreurs,
+- page de connexion
+- page de creation de compte
+- composant paramètre d’affichage
+- composant Lettre d’information et Réseaux Sociaux
+
+
+#### ⬆️ chore: storybook dependencies [(#1298)](https://github.com/GouvernementFR/dsfr/pull/1298)
+
+
+#### 📝 docs: corrections mineures de documentation [(#1297)](https://github.com/GouvernementFR/dsfr/pull/1297)
+- Fautes d'orthographe
+- Ajout de précision sur l'ajout icônes
+
+
+#### 🐛 fix(range): build storybook & ajout input label value [(#1286)](https://github.com/GouvernementFR/dsfr/pull/1286)
+- Correction de la page storybook du curseur
+- Ajout de la possibilité de modifier les intitulés des aria-label des inputs sur le curseur double
+
+
+#### 🐛 fix(display, transcription): corrige affichage dans storybook [(#1290)](https://github.com/GouvernementFR/dsfr/pull/1290)
+- corrige l'affichage des modales ouvertes dans storybook
+
+
+#### 📝 docs(button, modal): uniformisation du formatage des groupes de boutons [(#1292)](https://github.com/GouvernementFR/dsfr/pull/1292)
+- Les groupes de boutons sont maintenant présentés dans les exemples de code avec des ul/li plutôt que des div
+
+
+#### 🐛 fix(footer): met a jour le lien du footer service-public.gouv.fr [(#1295)](https://github.com/GouvernementFR/dsfr/pull/1295)
+- Remplace le lien "service-public.fr" par "service-public.gouv.fr" dans le composant footer et les exemples utilisant le pied de page
+
+
+
+### [v1.14.1](https://github.com/GouvernementFR/dsfr/compare/v1.14.0...v1.14.1) - 29 Août 2025
+
+#### 🐛 fix(build): correction du build des exemples [(#1279)](https://github.com/GouvernementFR/dsfr/pull/1279)
+
 
 #### ⬆️ chore(Node): change la version minimale de Node.js [(#1252)](https://github.com/GouvernementFR/dsfr/pull/1252)
 - Pour permettre plus de souplesse, les versions de Node acceptées pour build le DSFR sont maintenant "^20.19.0 || ^22.12.0 || >=24.0.0"
