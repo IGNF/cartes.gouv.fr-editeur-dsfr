@@ -55,12 +55,12 @@ Le bloc fonctionnel est composé de :
             <input class="fr-input" name="year" id="date-default-1578-bday-year" type="text">
         </div>
     </div>
-    <div class="fr-messages-group" id="date-default-1578-fieldset-messages" aria-live="assertive">
+    <div class="fr-messages-group" id="date-default-1578-fieldset-messages" aria-live="polite">
     </div>
 </fieldset>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='accordion-date'}
+:::fr-accordion[Extrait de code]{id='accordion-date'}
 
 ```html
 <fieldset class="fr-fieldset" id="date-default-1578-fieldset" role="group" aria-labelledby="date-default-1578-fieldset-legend date-default-1578-fieldset-messages">
@@ -95,7 +95,7 @@ Le bloc fonctionnel est composé de :
             <input class="fr-input" name="year" id="date-default-1578-bday-year" type="text">
         </div>
     </div>
-    <div class="fr-messages-group" id="date-default-1578-fieldset-messages" aria-live="assertive">
+    <div class="fr-messages-group" id="date-default-1578-fieldset-messages" aria-live="polite">
     </div>
 </fieldset>
 ```

@@ -3,7 +3,7 @@ title: Les principes à respecter
 shortTitle: Les principes à respecter
 description: Découvrez les principes essentiels qui régissent le Design Système de l’État (DSFR), clarté, inclusion, cohérence et respect de l’identité institutionnelle. Une base indispensable pour concevoir des services numériques accessibles et efficaces.
 shortDescription: Les règles fondamentales pour créer des interfaces conformes au DSFR.
-keywords: design système, DSFR, accessibilité, RGAA, cohérence, identité visuelle, typographie Marianne, mode sombre, couleurs, grille, pictogrammes, composants, État français
+keywords: design système, base, DSFR, accessibilité, RGAA, cohérence, identité visuelle, typographie Marianne, mode sombre, couleurs, grille, pictogrammes, composants, État français
 cover: ../_asset/base/cover/cover.png
 excerpt: Les interfaces des services publics doivent respecter un ensemble de règles qui garantissent clarté, accessibilité et cohérence dans tous les contextes. Voici les principes de base à intégrer dans tous vos projets.
 summary: Cette page présente les principes fondateurs du Design Système de l’État français (DSFR), conçus pour structurer des interfaces inclusives, cohérentes et alignées avec l’image de marque de l’État. Elle rappelle l’obligation d’utiliser les composants existants, d’appliquer les fondamentaux (couleurs, typographies, grilles, etc.) et souligne les spécificités liées à l’accessibilité et à la compatibilité avec le mode sombre. Ce socle commun vise à garantir une expérience utilisateur de qualité sur l’ensemble des services publics numériques.
@@ -30,11 +30,12 @@ L’image de marque de l’État et la représentation que s’en fait le citoye
 
 ### En application
 
-1. Que vous utilisiez ou non les composants de la librairie, le respect des [fondamentaux](../index.md) du DSFR est obligatoire : ils sont le seul moyen d’assurer la cohérence des interfaces de l’État ;
-2. Vous avez l’obligation d’utiliser les [composants](../../../../component/_part/doc/index.md) du DSFR s’ils existent dans la librairie, en respectant scrupuleusement leurs règles d’utilisation ;
-3. Vous pouvez créer vos propres composants seulement s’ils n’existent pas dans la librairie
-4. Si vous pensez qu’un composant n’existe pas, pensez à interroger la communauté. Il y a de fortes chances qu’il ait déjà été créé par une autre équipe.
-5. Si vous créez un composant et si vous pensez qu’il pourrait être utile à d’autres équipes, pensez à nous le partager pour qu’il soit réintégré à la librairie.
+1. L’application du DSFR doit toujours être complète. Le détournement de composants, l’ajout de sur-couches graphiques quelconques ou la simple recherche de ressemblance avec le Système de Design ne sont pas autorisés.
+2. Que vous utilisiez ou non les composants de la librairie, le respect des [fondamentaux](../index.md) du DSFR est obligatoire : ils sont le seul moyen d’assurer la cohérence des interfaces de l’État ;
+3. Vous avez l’obligation d’utiliser les [composants](../../../../component/_part/doc/index.md) du DSFR s’ils existent dans la librairie, en respectant scrupuleusement leurs règles d’utilisation ;
+4. Vous pouvez créer vos propres composants seulement s’ils n’existent pas dans la librairie
+5. Si vous pensez qu’un composant n’existe pas, pensez à interroger la communauté. Il y a de fortes chances qu’il ait déjà été créé par une autre équipe.
+6. Si vous créez un composant et si vous pensez qu’il pourrait être utile à d’autres équipes, pensez à nous le partager pour qu’il soit réintégré à la librairie.
 
 ## Le détail des fondamentaux
 

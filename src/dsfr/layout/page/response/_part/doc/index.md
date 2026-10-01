@@ -37,7 +37,7 @@ La page d’erreur 404 est composée de :
 
 ![](./_asset/page-erreur-404-modele.png)
 
-:::fr-accordion[### Extrait de code]{id=‘accordion-404-error’}
+:::fr-accordion[Extrait de code]{id=‘accordion-404-error’}
 
 ```html
 <main role="main" id="content">
@@ -101,7 +101,7 @@ La page d’erreur 500 est composée de :
 
 ![](./_asset/page-erreur-500-modele.png)
 
-:::fr-accordion[### Extrait de code]{id=‘accordion-500-error’}
+:::fr-accordion[Extrait de code]{id=‘accordion-500-error’}
 
 ```html
 <main role="main" id="content">
@@ -155,7 +155,7 @@ Puisque cette page s'affiche en cas d'erreur serveur et que le DSFR ne peut êtr
 
 ![](./_asset/page-erreur-503-modele.jpg)
 
-:::fr-accordion[### Extrait de code]{id=‘accordion-503-error’}
+:::fr-accordion[Extrait de code]{id=‘accordion-503-error’}
 
 ```html
 <!doctype html>
@@ -167,7 +167,7 @@ Puisque cette page s'affiche en cas d'erreur serveur et que le DSFR ne peut êtr
     <title>Erreur serveur</title>
     <style>
         /*!
- * DSFR v1.10.2 | SPDX-License-Identifier: MIT | License-Filename: LICENSE.md | restricted use (see terms and conditions)
+ * DSFR v1.10.2 | SPDX-License-Identifier: Etalab-2.0 | License-Filename: LICENSE.md | restricted use (see terms and conditions)
  */
         @charset "UTF-8";
 

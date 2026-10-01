@@ -6,7 +6,7 @@ title: Code du Gestionnaire de consentement
 shortTitle: Code du Gestionnaire de consentement
 description: Mise à disposition des extraits de code, de l’API et de la documentation technique du composant Gestionnaire de consentement.
 shortDescription: Gérer le consentement des usagers sur les cookies et données personnelles.
-keywords: consentement, cookies, données personnelles, CNIL, confidentialité, bandeau, modale, finalités, RGPD, accessibilité
+keywords: consentement, consent, cookies, données personnelles, CNIL, confidentialité, bandeau, modale, finalités, RGPD, accessibilité
 cover: ../_asset/cover/cover.png
 excerpt: Le gestionnaire de consentement permet d’informer les usagers et de recueillir leur accord sur l’utilisation de cookies non essentiels via un bandeau et une modale accessible à tout moment.
 summary: Ce composant propose une interface conforme aux recommandations de la CNIL pour recueillir le consentement des usagers concernant l’utilisation de cookies non fonctionnels. Il affiche un bandeau au chargement du site, permet une gestion fine des finalités et sous-finalités via une modale dédiée, et garantit l’accessibilité permanente au réglage des préférences depuis le pied de page. Le gestionnaire de consentement n’est pas personnalisable, sauf pour les textes affichés.
@@ -54,7 +54,7 @@ Le bandeau de cookies est composé des éléments suivants :
 
 ```HTML
 <div class="fr-consent-banner">
-    <h2 class="fr-h6">À propos des cookies sur nomdusite.fr</h2>
+    <h2 class="fr-h6">À propos des cookies sur nomdusite.gouv.fr</h2>
     <div class="fr-consent-banner__content">
         <p class="fr-text--sm">Bienvenue ! Nous utilisons des cookies pour améliorer votre expérience et les services disponibles sur ce site. Pour en savoir plus, visitez la page <a href="">Données personnelles et cookies</a>. Vous pouvez, à tout moment, avoir le contrôle sur les cookies que vous souhaitez activer.</p>
     </div>

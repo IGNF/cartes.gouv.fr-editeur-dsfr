@@ -6,7 +6,7 @@ title: Code du Bouton
 shortTitle: Code du Bouton
 description: Mise à disposition des extraits de code, de l’API et de la documentation technique du composant Bouton.
 shortDescription: Déclenchement d’une action dans l’interface
-keywords: bouton, interaction, action, DSFR, design système, accessibilité, formulaire, navigation
+keywords: bouton, button, interaction, action, DSFR, design système, accessibilité, formulaire, navigation
 cover: ../_asset/cover/cover.png
 excerpt: Le composant Bouton permet de déclencher une action dans la page, comme soumettre un formulaire ou naviguer vers un contenu. Il se décline en versions primaire, secondaire et tertiaire.
 summary: Le bouton est un composant central d’interaction dans les interfaces numériques. Il est utilisé pour initier une action précise selon un niveau de priorité - bouton primaire pour l’action principale, secondaire pour les actions secondaires et tertiaire pour les interactions contextuelles. Il respecte des règles d’écriture éditoriale claires, n’est pas personnalisable graphiquement et s’intègre de manière cohérente dans une interface respectueuse des standards d’accessibilité.
@@ -48,20 +48,24 @@ Le composant **Bouton** est un élément interactif permettant de déclencher de
 
 #### Groupes de boutons
 
-Les boutons peuvent être regroupés pour former des ensembles d'actions. Le groupe est formé par la succession de boutons enveloppés par l'élément HTML `<div>` et la classe `fr-btns-group`.
+Les boutons peuvent être regroupés pour former des ensembles d'actions. Le groupe est formé par la succession de boutons structurés sous forme de liste par l'élément HTML `<ul>` et la classe `fr-btns-group`.
 Un groupe est dit **hiérarchisé** s'il dispose d'un bouton primaire et de boutons secondaires. Sauf cas exceptionnel, n'utiliser qu'un seul bouton primaire dans un groupe. Un groupe **non hiérarchisé** est lui constitué uniquement de boutons secondaires, tertiaires, et/ou tertiaires sans contours.
 
 **Exemple de groupe de boutons**
 
 ```HTML
-<div class="fr-btns-group">
+<ul class="fr-btns-group">
+  <li>
     <button class="fr-btn" type="button">
         Bouton 1
     </button>
+  </li>
+  <li>
     <button class="fr-btn fr-btn--secondary" type="button">
         Bouton 2
     </button>
-</div>
+  </li>
+</ul>
 ```
 
 ---

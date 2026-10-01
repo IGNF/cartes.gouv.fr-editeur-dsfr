@@ -3,11 +3,11 @@ title: Grille et points de rupture
 shortTitle: Grille et points de rupture
 description: Comprendre et maîtriser la grille du DSFR pour structurer les interfaces web de l’État selon les résolutions cibles, avec ou sans gouttières, en respectant les points de rupture et les bonnes pratiques d’alignement et de mise en page.
 shortDescription: Structure responsive, points de rupture, alignements et classes CSS du DSFR.
-keywords: grille, responsive, DSFR, points de rupture, breakpoints, layout, gouttières, fr-container, fr-grid-row, fr-col, fr-col-offset, alignements, design système
+keywords: grille, grid, responsive, DSFR, points de rupture, breakpoints, layout, gouttières, fr-container, fr-grid-row, fr-col, fr-col-offset, alignements, design système
 cover: ../_asset/grid/cover/cover.png
 excerpt: Tout ce qu’il faut savoir sur la grille du DSFR, breakpoints, colonnes, gouttières, marges, alignements… pour une mise en page homogène et responsive à travers tous les services numériques de l’État.
 summary: Cette page détaille le fonctionnement de la grille du Design Système de l’État (DSFR), ses points de rupture, les valeurs à utiliser pour le design et le développement, et les classes CSS associées. Elle précise comment structurer les interfaces selon les tailles d’écran, ajuster les alignements, ajouter des gouttières ou des marges, et utiliser des décalages. Ces règles garantissent des interfaces cohérentes, accessibles et adaptables sur tous les supports.
-order: 6
+order: 5
 ---
 
 # Grille et points de rupture
@@ -15,11 +15,11 @@ order: 6
 :::fr-table[Caractéristiques de la grille]{valign=top multiline=true}
 | Mise en page | Valeurs en px | Résolution maquette en px | Token | Largeur max. du contenu | Tailles des gouttières (optionnelles) |
 | --- | --- | --- | --- | --- | --- |
-| XS | de 0 à 575 | 320 |  | / | 16 px |
-| SM | de 576 à 767 | 576 | `$bp-sm` | / | 16 px |
+| XS | de 0 à 575 | 320 |  | / | 16px |
+| SM | de 576 à 767 | 576 | `$bp-sm` | / | 16px |
 | MD | de 768 à 991 | 768 | `$bp-md` | / | 16px |
 | LG | de 992 à 1247 | 992 | `$bp-lg` | / | 24px |
-| XL | ≥ 1248 | 1440 | `$bp-xl` | 1200 | 24 px |
+| XL | ≥ 1248 | 1440 | `$bp-xl` | 1200 | 24px |
 :::
 
 ## Points de rupture

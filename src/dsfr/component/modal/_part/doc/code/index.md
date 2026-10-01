@@ -6,7 +6,7 @@ title: Code de la Modale
 shortTitle: Code de la Modale
 description: Mise à disposition des extraits de code, de l’API et de la documentation technique du composant Modale.
 shortDescription: Affichage focalisé d’un contenu secondaire
-keywords: modale, fenêtre, focus, interaction, DSFR, accessibilité, interface, contenu secondaire
+keywords: modale, modal, fenêtre, focus, interaction, DSFR, accessibilité, interface, contenu secondaire
 cover: ../_asset/cover/cover.png
 excerpt: Le composant Modale permet d’afficher un contenu ou une interaction dans une fenêtre superposée à la page, bloquant le fond et recentrant l’attention de l’usager.
 summary: La modale s’utilise pour présenter un contenu complémentaire ou une action simple sans sortir de la page en cours. Elle est conçue pour isoler une information importante tout en permettant de revenir au contexte initial en un clic. Non personnalisable, elle existe en plusieurs tailles, avec ou sans zone d’action, et respecte les standards d’accessibilité en figeant l’arrière-plan lors de son affichage.
@@ -67,7 +67,7 @@ Sa structure est la suivante :
 
 ```HTML
 <button data-fr-opened="false" aria-controls="modal" type="button" class="fr-btn">Modale simple</button>
-<dialog id="modal" class="fr-modal" aria-labelledby="modal-title" aria-modal="true">
+<dialog id="modal" class="fr-modal" aria-labelledby="modal-title">
     <div class="fr-container fr-container--fluid fr-container-md">
         <div class="fr-grid-row fr-grid-row--center">
             <div class="fr-col-12 fr-col-md-8 fr-col-lg-6">
@@ -170,10 +170,14 @@ La modale avec une **zone d’action** permet de guider l’utilisateur vers des
                     </div>
                     <!-- Zone d'action de la modale -->
                     <div class="fr-modal__footer">
-                        <div class="fr-btns-group fr-btns-group--right fr-btns-group--inline-reverse fr-btns-group--inline-lg fr-btns-group--icon-left">
-                            <button type="button" class="fr-btn fr-icon-checkbox-circle-line fr-btn--icon-left">Libellé bouton</button>
-                            <button type="button" class="fr-btn fr-icon-checkbox-circle-line fr-btn--icon-left fr-btn--secondary">Libellé bouton</button>
-                        </div>
+                        <ul class="fr-btns-group fr-btns-group--right fr-btns-group--inline-reverse fr-btns-group--inline-lg fr-btns-group--icon-left">
+                            <li>
+                                <button type="button" class="fr-btn fr-icon-checkbox-circle-line fr-btn--icon-left">Libellé bouton</button>
+                            </li>
+                            <li>
+                                <button type="button" class="fr-btn fr-icon-checkbox-circle-line fr-btn--icon-left fr-btn--secondary">Libellé bouton</button>
+                            <li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -189,7 +193,7 @@ La **zone d’action** de la modale peut être placée en haut de la modale sur 
 **Exemple de modale avec zone d'action ancré en haut en mobile**
 
 ```HTML
-<dialog id="modal-action-top" class="fr-modal fr-modal--top" aria-labelledby="modal-action-top-title" aria-modal="true">
+<dialog id="modal-action-top" class="fr-modal fr-modal--top" aria-labelledby="modal-action-top-title">
     <!-- Contenu de la modale -->
 </dialog>
 ```
@@ -201,7 +205,7 @@ Par défaut la modale se referme au clic sur le fond de la page, il est possible
 **Exemple de modale simple non refermable au clic sur le fond**
 
 ```HTML
-<dialog id="modal-backdrop" class="fr-modal" aria-labelledby="modal-backdrop-title" aria-modal="true" data-fr-concealing-backdrop="false">
+<dialog id="modal-backdrop" class="fr-modal" aria-labelledby="modal-backdrop-title" data-fr-concealing-backdrop="false">
     <!-- Contenu de la modale -->
 </dialog>
 ```
@@ -241,6 +245,46 @@ Sur la modale, les éléments suivants sont instanciés :
 - Le bouton d'ouverture de la modale, via l'attribut `aria-controls`
 
 Une fois chargé, le Js ajoute un attribut `data-fr-js-NOM_INSTANCE="true"` sur chacun des éléments instanciés
+
+#### Variante de modale sans bouton d'ouverture
+
+**Exemple de modale sans bouton d'ouverture lié**
+
+```HTML
+<dialog id="modal-without-button" class="fr-modal" aria-labelledby="modal-without-button-title">
+    <!-- Contenu de la modale -->
+</dialog>
+
+<script>
+    // Exemple d'ouverture programmatique sans bouton via l'API du DSFR
+    const modal = document.querySelector('#modal-without-button');
+    window.dsfr(modal).modal.disclose();
+</script>
+```
+
+L'API du DSFR mémorise l'élément qui avait le focus au moment de l'ouverture de la modale. À la fermeture, elle restaure le focus sur cet élément. Si aucun élément ne possédait le focus c'est le lien autour du logo dans l'en-tête qui prend le focus (premier élément de la page après les liens d'évitements).
+
+Vous pouvez modifier ce comportement pour choisir la destination du focus via l'événement dsfr.conceal de la modale :
+
+```js
+modal.addEventListener('dsfr.conceal', (e) => {
+    monElement.focus();
+});
+```
+
+#### Variante de modale avec plusieurs boutons d'ouverture liés
+
+**Exemple de modale avec plusieurs boutons d'ouverture liés**
+
+```HTML
+<button aria-controls="modal-multi-button" data-fr-opened="false" type="button" class="fr-btn">Ouvrir la modale (bouton 1)</button>
+<button aria-controls="modal-multi-button" data-fr-opened="false" type="button" class="fr-btn">Ouvrir la modale (bouton 2)</button>
+<dialog id="modal-multi-button" class="fr-modal" aria-labelledby="modal-multi-button-title">
+    <!-- Contenu de la modale -->
+</dialog>
+```
+
+Quand plusieurs boutons peuvent ouvrir la même modale, l'API du DSFR détecte quel bouton a déclenché l'ouverture. À la fermeture, elle restaure le focus sur cet élément. Si aucun élément ne possédait le focus c'est le lien autour du logo dans l'en-tête qui prend le focus (premier élément de la page après les liens d'évitements).
 
 #### API
 

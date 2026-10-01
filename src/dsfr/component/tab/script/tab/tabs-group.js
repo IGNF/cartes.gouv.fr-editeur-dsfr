@@ -118,9 +118,10 @@ class TabsGroup extends api.core.DisclosuresGroup {
   };
 
   focus () {
-    if (this.current) {
-      this.current.focus();
-    }
+    if (!this.current) return;
+
+    const button = this.current.primaryButtons.find(button => button.list === this.list);
+    if (button) button.focus();
   }
 
   apply () {
@@ -148,7 +149,8 @@ class TabsGroup extends api.core.DisclosuresGroup {
     const paneHeight = Math.round(this.current.node.offsetHeight);
     if (this.panelHeight === paneHeight) return;
     this.panelHeight = paneHeight;
-    this.style.setProperty('--tabs-height', (this.panelHeight + this.listHeight) + 'px');
+    const offsetNegativeMargin = 4;
+    this.style.setProperty('--tabs-height', (this.panelHeight + this.listHeight - offsetNegativeMargin) + 'px');
   }
 }
 

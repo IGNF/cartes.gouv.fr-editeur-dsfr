@@ -47,12 +47,12 @@ Ce bloc se compose de :
                 </label>
             </div>
         </div>
-        <div class="fr-messages-group" assert-live="assertive" id="sex-1427-fieldset-messages">
+        <div class="fr-messages-group" aria-live="polite" id="sex-1427-fieldset-messages">
         </div>
     </fieldset>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='accordion-sex-request'}
+:::fr-accordion[Extrait de code]{id='accordion-sex-request'}
 ```html
 <fieldset class="fr-fieldset" role="group" aria-describedby="sex-1427-fieldset-legend sex-1427-fieldset-messages" id="sex-1427-fieldset">
     <legend class="fr-fieldset__legend" id="sex-1427-fieldset-legend">
@@ -74,7 +74,7 @@ Ce bloc se compose de :
             </label>
         </div>
     </div>
-    <div class="fr-messages-group" assert-live="assertive" id="sex-1427-fieldset-messages">
+    <div class="fr-messages-group" aria-live="polite" id="sex-1427-fieldset-messages">
     </div>
 </fieldset>
 ```
@@ -107,12 +107,12 @@ Ce bloc se compose de :
                 </select>
             </div>
         </div>
-        <div class="fr-messages-group" assert-live="assertive" id="civility-family-1432-fieldset-messages">
+        <div class="fr-messages-group" aria-live="polite" id="civility-family-1432-fieldset-messages">
         </div>
     </fieldset>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='accordion-situation'}
+:::fr-accordion[Extrait de code]{id='accordion-situation'}
 ```html
 <fieldset class="fr-fieldset" aria-label="Demande de situation familiale" aria-describedby="civility-family-1432-fieldset-messages">
     <div class="fr-fieldset__element">
@@ -132,7 +132,7 @@ Ce bloc se compose de :
             </select>
         </div>
     </div>
-    <div class="fr-messages-group" assert-live="assertive" id="civility-family-1432-fieldset-messages">
+    <div class="fr-messages-group" aria-live="polite" id="civility-family-1432-fieldset-messages">
     </div>
 </fieldset>
 ```
@@ -168,12 +168,12 @@ Si le nombre de titre d’appel est réduit, utiliser **des boutons radios** :
                 </label>
             </div>
         </div>
-        <div class="fr-messages-group" aria-live="assertive" id="civility-honorific-1-messages">
+        <div class="fr-messages-group" aria-live="polite" id="civility-honorific-1-messages">
         </div>
     </fieldset>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='accordion-tagline'}
+:::fr-accordion[Extrait de code]{id='accordion-tagline'}
 ```html
 <fieldset class="fr-fieldset" aria-label="Demande du titre d’appel" aria-describedby="civility-honorific-1-messages">
     <div class="fr-fieldset__element">
@@ -200,7 +200,7 @@ Si le nombre de titre d’appel est réduit, utiliser **des boutons radios** :
             </label>
         </div>
     </div>
-    <div class="fr-messages-group" aria-live="assertive" id="civility-honorific-1-messages">
+    <div class="fr-messages-group" aria-live="polite" id="civility-honorific-1-messages">
     </div>
 </fieldset>
 ```
@@ -227,12 +227,12 @@ Si le nombre de titre d’appel est supérieur à 4-5, utiliser **un select** 
                 </select>
             </div>
         </div>
-        <div class="fr-messages-group" aria-live="assertive" id="civility-honorific-2-messages">
+        <div class="fr-messages-group" aria-live="polite" id="civility-honorific-2-messages">
         </div>
     </fieldset>
 </div>
 
-:::fr-accordion[### Extrait de code]{id='accordion-tagline-2'}
+:::fr-accordion[Extrait de code]{id='accordion-tagline-2'}
 ```html
 <fieldset class="fr-fieldset" aria-label="Demande du titre d’appel" aria-describedby="civility-honorific-2-messages">
     <div class="fr-fieldset__element">
@@ -252,7 +252,7 @@ Si le nombre de titre d’appel est supérieur à 4-5, utiliser **un select** 
             </select>
         </div>
     </div>
-    <div class="fr-messages-group" aria-live="assertive" id="civility-honorific-2-messages">
+    <div class="fr-messages-group" aria-live="polite" id="civility-honorific-2-messages">
     </div>
 </fieldset>
 ```
